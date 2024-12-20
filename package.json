@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "cypress": "cypress open --env environment=develop",
+    "cypress:prod": "cypress open --env environment=production"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -16,6 +18,7 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
     "lucide-react": "^0.468.0",
     "next": "15.1.1",
     "next-themes": "^0.4.4",
@@ -32,6 +35,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^13.17.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.1",
     "fluid-tailwind": "^1.0.4",

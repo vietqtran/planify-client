@@ -2,7 +2,10 @@ import React from "react";
 
 const GithubLoginButton = () => {
   return (
-    <button className="p-2 hover:bg-neutral-200 dark:hover:bg-neutral-800 border flex gap-2 justify-center g w-full items-center rounded-lg transition duration-150">
+    <button
+      data-cy="continue-with-github-button"
+      className="g flex w-full items-center justify-center gap-2 rounded-lg border p-2 transition duration-150 hover:bg-neutral-200 dark:hover:bg-neutral-800"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"

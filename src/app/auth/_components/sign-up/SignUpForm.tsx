@@ -68,8 +68,8 @@ const SignUpForm = () => {
 
   return (
     <div className="w-full max-w-lg space-y-4 rounded-lg p-5">
-      <div className="text-left pt-3">
-        <h1 className="text-2xl font-bold mb-2">Sign Up</h1>
+      <div className="pt-3 text-left">
+        <h1 className="mb-2 text-2xl font-bold">Sign Up</h1>
         <p className="text-sm text-muted-foreground">
           Create an account to continue
         </p>
@@ -77,9 +77,9 @@ const SignUpForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-3 w-full"
+          className="w-full space-y-3"
         >
-          <div className="flex items-start justify-between gap-2 w-full">
+          <div className="flex w-full items-start justify-between gap-2">
             <FormField
               control={form.control}
               name="firstName"
@@ -88,7 +88,7 @@ const SignUpForm = () => {
                   <FormLabel>First name</FormLabel>
                   <FormControl>
                     <Input
-                      className="focus:ring-2 w-full"
+                      className="w-full focus:ring-2"
                       placeholder="John"
                       {...field}
                     />
@@ -175,32 +175,36 @@ const SignUpForm = () => {
           <div className="w-full pt-4">
             <Button
               loading={isPending}
-              className="w-full dark:text-white font-semibold bg-blue-500 hover:bg-blue-600"
+              className="w-full bg-blue-500 font-semibold hover:bg-blue-600 dark:text-white"
               type="submit"
             >
-              Submit
+              Sign up
             </Button>
           </div>
         </form>
       </Form>
 
-      <div className="flex items-center gap-2 w-full">
+      <div className="flex w-full items-center gap-2">
         <span className="h-[1px] flex-1 border-b"></span>
-        <span className="text-muted-foreground text-xs">or</span>
+        <span className="text-xs text-muted-foreground">or</span>
         <span className="h-[1px] flex-1 border-b"></span>
       </div>
 
-      <div className="flex gap-3 md:flex-row flex-col">
+      <div className="flex flex-col gap-3 md:flex-row">
         <GoogleLoginButton />
         <GithubLoginButton />
       </div>
 
-      <div className="pt-4 pb-5">
-        <p className="text-center text-sm text-muted-foreground">
+      <div className="pb-5 pt-4">
+        <p
+          data-cy="switch-to-sign-in"
+          className="text-center text-sm text-muted-foreground"
+        >
           Already have an account?{" "}
           <a
+            data-cy="sign-in-link"
             href="/auth/sign-in"
-            className="underline font-semibold text-blue-500 hover:text-blue-600"
+            className="font-semibold text-blue-500 underline hover:text-blue-600"
           >
             Sign In
           </a>
